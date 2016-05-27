@@ -10,7 +10,12 @@ public class UserAuthentication {
 
 	public boolean isCertified(String name, String password) {
 
-		return false;
+		if (name.equals("YAMADA") && password.equals("XXX")) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 }

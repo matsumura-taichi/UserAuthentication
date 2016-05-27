@@ -24,7 +24,7 @@ public class UserAuthenticationTest {
 
 		assertFalse(auth.isCertified("YAMADA", "AAA"));
 
-//		assertTrue(auth.isCertified("YAMADA", "XXX"));
+		assertTrue(auth.isCertified("YAMADA", "XXX"));
 	}
 
 }
