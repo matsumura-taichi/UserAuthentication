@@ -2,10 +2,10 @@ package jp.co.nichiwa_system;
 
 public class UserAuthentication {
 
-	UserDAO dao = this.createDAO();
+	UserDAO dao;
 
-	protected UserDAO createDAO() {
-		return new UserDAOImpl();
+	public UserAuthentication(UserDAO dao) {
+		this.dao = dao;
 	}
 
 	public boolean isCertified(String name, String password) {
