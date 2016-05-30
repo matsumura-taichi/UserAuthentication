@@ -20,7 +20,11 @@ public class UserAuthenticationTest {
 			}
 		}
 
-		UserAuthentication auth = new UserAuthentication(new UserDAOMock());
+		UserAuthentication auth = new UserAuthentication() {
+			protected UserDAO createDAO() {
+				return new UserDAOMock();
+			}
+		};
 
 		assertFalse(auth.isCertified("YAMADA", "AAA"));
 
