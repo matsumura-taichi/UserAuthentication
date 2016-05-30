@@ -10,7 +10,7 @@ public class UserAuthentication {
 
 	public boolean isCertified(String name, String password) {
 
-		if (name.equals("YAMADA") && password.equals("XXX")) {
+		if (dao.getPassword(name).equals(password)) {
 			return true;
 		} else {
 			return false;

@@ -13,7 +13,7 @@ public class UserAuthenticationTest {
 
 			public String getPassword(String userName) {
 				if (userName.equals("YAMADA")) {
-					return "XXX";
+					return "YYY";
 				}
 				fail("想定外の引数が渡されています");
 				return "";
@@ -24,7 +24,7 @@ public class UserAuthenticationTest {
 
 		assertFalse(auth.isCertified("YAMADA", "AAA"));
 
-		assertTrue(auth.isCertified("YAMADA", "XXX"));
+		assertTrue(auth.isCertified("YAMADA", "YYY"));
 	}
 
 }
