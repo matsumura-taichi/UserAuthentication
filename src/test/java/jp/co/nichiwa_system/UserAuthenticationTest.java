@@ -11,6 +11,7 @@ public class UserAuthenticationTest {
 
 		class UserDAOMock implements UserDAO {
 
+			@Override
 			public String getPassword(String userName) {
 				if (userName.equals("YAMADA")) {
 					return "YYY";
